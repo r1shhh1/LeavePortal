@@ -8,7 +8,7 @@ A Spring Boot based Leave Management System with JWT authentication and role-bas
 
 - User registration and login with JWT authentication
 - Role-based access control (Admin, Manager, Employee)
-- Admin can create, update, and delete users
+- Admin can promote and demote users , and delete users
 - Managers can approve or reject leave requests
 - Employees can apply for leaves and check leave status
 
