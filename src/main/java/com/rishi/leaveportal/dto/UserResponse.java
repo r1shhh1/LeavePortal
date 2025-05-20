@@ -10,9 +10,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegisterRequest {
+public class UserResponse {
+    private Long id;
     private String username;
-    private String password;
-    private String name;
-    private String department;
+    private String role;
 }
