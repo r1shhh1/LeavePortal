@@ -31,7 +31,7 @@ public class SecurityConfig {
         return httpSecurity
                 .csrf(csrf-> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll() // public endpoints
+                        .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/swagger-ui/*", "/v3/api-docs", "/v3/api-docs/**","/api/auth/**").permitAll() // public endpoints
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated() // all others require auth
                 )

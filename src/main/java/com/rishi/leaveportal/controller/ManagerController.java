@@ -19,6 +19,9 @@ public class ManagerController {
 
     private final LeaveService leaveService;
 
+
+    //fetch employees under the manager
+
     @GetMapping("/leave-requests")
     public ResponseEntity<List<LeaveResponse>> getAllAssignedLeaveRequests(
             @AuthenticationPrincipal UserDetails userDetails

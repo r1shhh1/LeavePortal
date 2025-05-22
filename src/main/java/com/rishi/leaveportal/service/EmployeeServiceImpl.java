@@ -21,8 +21,9 @@ public class EmployeeServiceImpl implements EmployeeService{
 
         Employee man = employeeRepository.findByUserUsername(manUsername);
 
-        if(man.getUser().getRole() != UserInfo.Role.MANAGER){
-            throw new Exception("Provided managerUsername is not a manager");
+        if(man.getUser().getRole() != UserInfo.Role.MANAGER &&
+            emp.getDepartment().equals(man.getDepartment())){
+            throw new Exception("Provided managerUsername is not a manager or the manager is from another department");
         }
 
         emp.setManager(man);

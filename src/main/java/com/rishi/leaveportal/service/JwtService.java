@@ -18,7 +18,7 @@ public class JwtService {
 
     private static final String SECRET_KEY = "s35tX8eW39hJ1gBvN5z7rVjLpWc6qS2aO9dFh8iGkK4lP6oQ0oY9wM5u";
 
-    private static final long JWT_EXPIRATION_MS = 1000 * 60 * 60 * 24; //24 hours
+    private static final long JWT_EXPIRATION_MS = 1000L * 60 * 60 * 24 * 30; //24 hours
 
     public String extractUsername(String token){
         return extractClaim(token, Claims::getSubject);
